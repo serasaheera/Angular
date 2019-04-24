@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h1>
+    Haai {{ name }}
+  </h1>
+ <input type="text" id="name" [(ngModel)]="name">
+
+ <div class="container">
+   <table>
+     <thead>
+     <tr>
+       <th>id</th>
+       <th>name</th>
+       <th>age</th>
+       <th>address</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let student of students">
+       <td>{{student.id}}</td>
+       <td>{{student.name}}</td>
+       <td>{{student.age}}</td>
+       <td>{{student.address}}</td>
+       </tr>
+    </tbody>
+   </table>
+ </div>
+
+<router-outlet></router-outlet>
