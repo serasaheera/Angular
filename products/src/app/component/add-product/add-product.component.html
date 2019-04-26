@@ -1,26 +1,45 @@
 
 
 <div class="container">
-  <form action="/action_page.php">
+  <form (ngSubmit)="AddProduct()" action="/action_page.php">
+
+    <div class="form-group">
+      <label for="prodctid">Product Id:</label>
+      <input type="number" class="form-control" name="p_Id" [(ngModel)]="productItem.productId"/>
+    </div>
+
     <div class="form-group">
         <label for="prodctname">Product Name:</label>
-        <input type="text" class="form-control" id="pname">
+        <input type="text" class="form-control" name="p_name" [(ngModel)]="productItem.productName"/>
       </div>
       <div class="form-group">
           <label for="productcode">Product Code:</label>
-          <input type="text" class="form-control" id="pcode">
+          <input type="text" class="form-control" name="p_code" [(ngModel)]="productItem.productCode"/>
         </div>
-    <div class="form-group">
-      <label for="releasedate">Release Date:</label>
-      <input type="text" class="form-control" id="pdate">
-    </div>
+
+        <div class="form-group">
+          <label for="produrelease">Release Date:</label>
+          <input type="text" class="form-control" name="p_Rdate" [(ngModel)]="productItem.releaseDate"/>
+        </div>
+    
+        <div class="form-group">
+          <label for="productdescription">Description:</label>
+          <input type="text" class="form-control" name="p_description" [(ngModel)]="productItem.description"/>
+        </div>
+
     <div class="form-group">
       <label for="Price">Price:</label>
-      <input type="text" class="form-control" id="pprice">
+      <input type="number" class="form-control" name="p_price" [(ngModel)]="productItem.price"/>
     </div>
+
     <div class="form-group">
       <label for="star_rating">StarRating:</label>
-      <input type="text" class="form-control" id="prate">
+      <input type="number" class="form-control" name="p_rate" [(ngModel)]="productItem.starRating"/>
+    </div>
+
+    <div class="form-group">
+      <label for="productimage">ImageUrl:</label>
+      <input type="text" class="form-control" name="p_image" [(ngModel)]="productItem.imageUrl"/>
     </div>
        
 
